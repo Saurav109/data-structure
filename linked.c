@@ -12,9 +12,9 @@ struct Node{
 void pri(struct Node *one);
 
 int main(){
-	// struct Node *one =(struct Node*)malloc (sizeof(struct Node));
-	// struct Node *two =(struct Node*)malloc (sizeof(struct Node));
-	// struct Node *three =(struct Node*)malloc (sizeof(struct Node));
+	struct Node *one =(struct Node*)malloc (sizeof(struct Node));
+	struct Node *two =(struct Node*)malloc (sizeof(struct Node));
+	struct Node *three =(struct Node*)malloc (sizeof(struct Node));
 
 	struct Node *one;
 	struct Node *two;

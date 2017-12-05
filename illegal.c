@@ -13,4 +13,5 @@ void go(int *a) {
   *(a+1)=59;
   //this will work but its illigal way of creating variable
   printf("printng other value %d\n",*(a+1) );
+  int x;
 }
