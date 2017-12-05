@@ -41,7 +41,10 @@ void pr(){
     z++;
   }
 }
+
+//getting value and assigning
 void inputs(int o){
+
   *(a+n)=o;
   n++;
 }
