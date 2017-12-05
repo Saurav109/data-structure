@@ -32,8 +32,6 @@ int main(){
 	printf("%d\n",*p );
 
 //malloc will return random memory loaction everytime
-printf("%u\n",malloc(sizeof (int)) );
-
-
+	printf("%u\n",malloc(sizeof (int)) );
 
 }
