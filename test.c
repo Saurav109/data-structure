@@ -2,11 +2,19 @@
 #include<stdlib.h>
 
 int main(){
-  char *x;
-  char y[10];
-  gets(y);
-  x=y;
-  while(*x!=NULL){
-    printf("%c ",*x++ );
-  }
+  int a=10;
+  int *b = &a;
+
+  int *c;
+  c=b;
+  int d=3478;
+  c=&d;
+  printf("%d\n",*b );
+
+}
+void fun(int *x){
+  *x=489;
+}
+void ok(int *p){
+
 }
