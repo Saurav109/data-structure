@@ -1,0 +1,26 @@
+/home/saurav109/data-structure/advancedPointer.c: In function ‘main’:
+/home/saurav109/data-structure/advancedPointer.c:4:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   int *c[4]={1,2,3,5};
+              ^
+/home/saurav109/data-structure/advancedPointer.c:4:14: note: (near initialization for ‘c[0]’)
+/home/saurav109/data-structure/advancedPointer.c:4:16: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   int *c[4]={1,2,3,5};
+                ^
+/home/saurav109/data-structure/advancedPointer.c:4:16: note: (near initialization for ‘c[1]’)
+/home/saurav109/data-structure/advancedPointer.c:4:18: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   int *c[4]={1,2,3,5};
+                  ^
+/home/saurav109/data-structure/advancedPointer.c:4:18: note: (near initialization for ‘c[2]’)
+/home/saurav109/data-structure/advancedPointer.c:4:20: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   int *c[4]={1,2,3,5};
+                    ^
+/home/saurav109/data-structure/advancedPointer.c:4:20: note: (near initialization for ‘c[3]’)
+/home/saurav109/data-structure/advancedPointer.c:6:16: error: invalid initializer
+   int ***cpp[]=cp;
+                ^~
+/home/saurav109/data-structure/advancedPointer.c:8:18: error: lvalue required as increment operand
+   printf("%d\n",*++cpp );
+                  ^~
+/home/saurav109/data-structure/advancedPointer.c:8:12: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int ***’ [-Wformat=]
+   printf("%d\n",*++cpp );
+           ~^    ~~~~~~
