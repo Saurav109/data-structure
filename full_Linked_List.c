@@ -1,64 +1,81 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+struct node
+{
+    int data;
+    struct node *next;
+}*head;
 
-struct list{
-  int data;
-  struct list *next;
-};
 
-void pr(struct list *node);
-void adds(int x, struct list *node);
+void ins();
+void pr();
 int main(){
-  struct list *node =(struct list *)malloc(sizeof(struct list ));
+  head=NULL;
 
-
-  int in=1;
-  int x;
-  while(in!=3){
-    scanf("%d", &in);
-    switch(in){
+  printf("%s\n","1.in \n2.print\n3.bg\n" );
+  int in;
+  while(1){
+    scanf("%d",&in );
+    switch (in) {
       case 1:
-      scanf("%d",&x );
-      adds(x,node);
+      ins();
       break;
-
       case 2:
-      pr(node);
+      pr();
       break;
-
       case 3:
-      in=3;
-      break;
-
-      default:
-      printf("%s\n","error" );
+      bg();
       break;
     }
+  }
+
+}
+void ins(){
+  struct node *n=(struct node *)malloc(sizeof(struct node));
+  n->next=NULL;
+  int data;
+  scanf("%d",&data );
+  n->data=data;
+  if(head==NULL)
+  {head=n;}
+  else{
+    printf("%s\n","in the else" );
+    struct node *temp;
+    temp=head;
+    while(temp->next!=NULL){
+      temp=temp->next;
+    }
+    temp->next=n;
 
   }
 
-
 }
-void adds(int x, struct list *node){
-  // printf("%s\n","adding" );
-  // struct list *n =(struct list *)malloc(sizeof(struct list ));
-  // node->next=n;
-  // n->data=x;
-  struct list *temp=node;
-  struct list *n =(struct list *)malloc(sizeof(struct list ));
-  n->data=x;
-  while(temp!=NULL){
+void pr(){
+  struct node *temp;
+  temp=head;
+  printf("%s\n","in the print" );
+  while (temp!=NULL) {
+
+    printf("%d ",temp->data );
     temp=temp->next;
   }
-  temp->data=x;
+}
+void bg(){
+  if(head!=NULL){
+  struct node *n=(struct node *)malloc(sizeof(struct node));
+  n->next=NULL;
+  int data;
+  scanf("%d",&data );
+  n->data=data;
+
+  n->next=head;
+
+  head=n;
+}
+else{
+  ins();
 }
 
-void pr(struct list *node){
-  printf("%s\n","printing" );
-  while (node != NULL)
-  {
-     printf(" %d ", node->data);
-     node = node->next;
-  }
+
 }
