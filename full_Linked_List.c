@@ -13,9 +13,10 @@ void pr();
 int main(){
   head=NULL;
 
-  printf("%s\n","1.in \n2.print\n3.bg\n" );
+
   int in;
   while(1){
+    printf("%s\n","1.in \n2.print\n3.bg\n4.del\n5.in in posi\n\n" );
     scanf("%d",&in );
     switch (in) {
       case 1:
@@ -27,6 +28,13 @@ int main(){
       case 3:
       bg();
       break;
+      case 4:
+      del();
+      break;
+      case 5:
+      posi();
+      break;
+
     }
   }
 
@@ -54,12 +62,13 @@ void ins(){
 void pr(){
   struct node *temp;
   temp=head;
-  printf("%s\n","in the print" );
+  printf("%s\n","element :" );
   while (temp!=NULL) {
 
     printf("%d ",temp->data );
     temp=temp->next;
   }
+  printf("%s\n\n","" );
 }
 void bg(){
   if(head!=NULL){
@@ -78,4 +87,40 @@ else{
 }
 
 
+}
+void del(){
+  pr();
+  int p;
+  scanf("%d",&p );
+  struct node *temp;
+  temp=head;
+  int i;
+  for(i=2;i<p;i++){
+    printf("%d",temp->data );
+    temp=temp->next;
+
+  }
+  printf("getting the adress of %d\n",temp->data );
+  temp->next=temp->next->next;
+}
+
+void posi(){
+
+  pr();
+  int x;
+  printf("%s\n","position" );
+  scanf("%d",&x );
+  int v;
+  printf("%s\n","value" );
+  scanf("%d\n", &v);
+  struct node *temp;
+  struct node *t=(struct node *)malloc(sizeof(struct node));
+  t->data=v;
+  temp=head;
+  int i;
+  for(i=2;i<x;i++){
+    temp=temp->next;
+  }
+  t->next=temp->next;
+  temp->next=t;
 }
