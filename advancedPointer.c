@@ -35,5 +35,12 @@ int main(){
      printf("%s ", *cpp[-2]+3);
      printf("%s ", cpp[-1][-1]+1);
 
+     int *po[3]={1,2,3};
+     int **po2[]={c,c+1,c+2};
+     int ***po3=po2;
+
+     printf("%d\n",po );
+
+
  return 0;
 }

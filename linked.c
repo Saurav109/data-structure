@@ -45,6 +45,4 @@ void pri(struct Node *one){
 		one=one->next;
 
 	}
-
-
 }
